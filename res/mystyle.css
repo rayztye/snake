@@ -1,0 +1,82 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 01.07.2020, 09:26:56
+    Author     : jannikb
+*/
+
+html
+{
+    font-family: calibri;
+    font-size: 25px;
+}
+
+body
+{
+    margin: 0;
+}
+
+.first
+{
+    background-color: green;
+}
+
+.last
+{
+    background-color: red;
+}
+
+.battlefield
+{
+    width: 1600px;
+    height: 800px;
+    border: 1px solid black;
+    display: flex;
+    float: left;
+    background-color: white;
+}
+
+.snake
+{
+    position: absolute;
+    top: 450px;
+    left: 750px;
+    padding: 2px;
+}
+
+.snake > img
+{
+    background: url(res/snake-graphics.png) 192px 64px;
+}
+
+span > img
+{
+    height: 50px;
+    width: 50px;
+}
+
+.infobox
+{
+    display: block;
+    float: left;
+    margin-left: 20px;
+}
+
+.food
+{
+    position: absolute;
+    top: 400px;
+    left: 750px;
+}
+
+button
+{
+    display: block;
+    border: 0;
+    font-family: inherit;
+    background-color: inherit; 
+    font-size: inherit;
+}

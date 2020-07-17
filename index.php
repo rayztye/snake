@@ -1,0 +1,35 @@
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+ 
+    Created on : 01.07.2020, 09:26:56
+    Author     : jannikb
+-->
+<DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" type="image/x-icon" href="res/favicon.ico">
+        <link rel="stylesheet" href="res/mystyle.css">
+        <title>jQuery</title>
+        <script type="text/javascript" src="jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="function.js"></script>
+    </head>
+    <body>
+        <div class="battlefield">
+            <span class='snake'><img src='res/snake-graphics.png'></span>
+            <span class='food'><img src='res/food.png'></span>
+        </div>
+        <div class="infobox">
+            <div class='score'> Score: 1</div>
+            <div class="difficulty">
+                Difficulty:
+                <button class="easy">Easy</button>
+                <button class="normal">Normal</button>
+                <button class="hard">Hard</button>
+            </div>
+        </div>
+    </body>
+</html
