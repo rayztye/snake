@@ -23,7 +23,7 @@ and open the template in the editor.
             <span class='food'><img src='res/food.png'></span>
         </div>
         <div class="infobox">
-            <div class='score'> Score: 1</div>
+            <div class='score'> Score: 0</div>
             <div class="difficulty">
                 Difficulty:
                 <button class="easy">Easy</button>

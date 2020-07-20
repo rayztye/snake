@@ -9,25 +9,25 @@ and open the template in the editor.
 */
 $(document).ready(function()
 {
-    var sc          = 1;
-    var food        = $(".food");
-    var score       = $(".score");
-    var snake       = $(".snake");
-//    var pos         = $(".position");
+    var sc = 0;
+    var food = $(".food");
+    var score = $(".score");
+    var snake = $(".snake");
+//    var pos = $(".position");
     var battlefield = $(".battlefield");
-    var coords      = [$(".snake")];
-    var snake       = coords[0];
-    var dx = 0,dy   = 0;
-    var time        = 300;
-    var c           = 0;
+    var coords = [$(".snake")];
+    var snake = coords[0];
+    var dx = 0,dy = 0, dir = 0;
+    var time = 300;
+    var c = 0;
     
     $(window).on("keydown", function(event){
         switch(event.which)
         {
-            case 87 : up();     break; /* w */
-            case 65 : left();   break; /* a */
-            case 83 : down();   break; /* s */
-            case 68 : right();  break; /* d */
+            case 87 : if( dir != 83 ) { up();   dir = 87; } break; /* w */
+            case 65 : if( dir != 68 ) { left(); dir = 65; } break; /* a */
+            case 83 : if( dir != 87 ) { down(); dir = 83; } break; /* s */
+            case 68 : if( dir != 65 ) {right(); dir = 68; } break; /* d */
         }
     });
     
