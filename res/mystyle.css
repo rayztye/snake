@@ -49,8 +49,8 @@ body
 
 .snake > img
 {
-    background: url(res/snake-graphics.png);
-    background-position: 192px 64px;
+    /*background: url(res/snake.png);*/
+    /*background-position: 192px 64px;*/
 }
 
 span > img

@@ -19,17 +19,17 @@ and open the template in the editor.
     </head>
     <body>
         <div class="battlefield">
-            <span class='snake'><img src='res/snake-graphics.png'></span>
-            <span class='food'><img src='res/food.png'></span>
+            <span class='snake'><img src='res/snake.png'/></span>
+            <span class='food'><img src='res/food.png'&/></span>
         </div>
         <div class="infobox">
             <div class='score'> Score: 0</div>
-            <div class="difficulty">
+<!--            <div class="difficulty">
                 Difficulty:
                 <button class="easy">Easy</button>
                 <button class="normal">Normal</button>
                 <button class="hard">Hard</button>
-            </div>
+            </div>-->
         </div>
     </body>
 </html
