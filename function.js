@@ -9,17 +9,23 @@ and open the template in the editor.
 */
 $(document).ready(function()
 {
+    var bf = {width:80, height: 40, fieldsize: 50};
     var sc = 0;
     var food = $(".food");
     var score = $(".score");
     var snake = $(".snake");
 //    var pos = $(".position");
-    var battlefield = $(".battlefield");
-    var coords = [$(".snake")];
+    var battlefield = $(".battlefield").width(bf.width*bf.fieldsize).height(bf.height*bf.fieldsize);
+    var coords = [$(".snake.first"),$(".snake.mid"),$(".snake.last")];
     var snake = coords[0];
     var dx = 0,dy = 0, dir = 0;
     var time = 300;
     var c = 0;
+    
+    $(".snake.mid").removeClass('mid');
+    var init = coords[1].position();
+    coords[1].css({left: init.left-50 });
+    coords[2].css({left: init.left-100 });
     
     $(window).on("keydown", function(event){
         switch(event.which)
@@ -31,10 +37,33 @@ $(document).ready(function()
         }
     });
     
-    function up()   { dx = 0;   dy = -50; }
-    function left() { dx = -50; dy = 0;   }
-    function down() { dx = 0;   dy = 50;  }
-    function right(){ dx = 50;  dy = 0;   }
+    function up()   
+    {
+        dx = 0;
+        dy = -50;
+        snake.css("background-position", "-150px 0");
+    }
+    
+    function left() 
+    { 
+        dx = -50; 
+        dy = 0;  
+        snake.css("background-position", "-150px -50px"); 
+    }
+    
+    function down() 
+    { 
+        dx = 0;   
+        dy = 50; 
+        snake.css("background-position", "-200px -50px"); 
+    }
+    
+    function right()
+    { 
+        dx = 50;  
+        dy = 0;  
+        snake.css("background-position", "-200px 0");
+    }
     
     function heartbeat()
     {

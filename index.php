@@ -15,21 +15,24 @@ and open the template in the editor.
         <link rel="stylesheet" href="res/mystyle.css">
         <title>jQuery</title>
         <script type="text/javascript" src="jquery/jquery.min.js"></script>
-        <script type="text/javascript" src="function.js"></script>
+        <script type="text/javascript" src="logic.js"></script>
+        <!--<script type="text/javascript" src="function.js"></script>-->
     </head>
     <body>
-        <div class="battlefield">
-            <span class='snake'><img src='res/snake.png'/></span>
-            <span class='food'><img src='res/food.png'&/></span>
+<!--        <div class="battlefield">
+            <span class='snake first'></span>
+            <span class='snake mid'></span>
+            <span class='snake last'></span>
+            <span class='food'><img src='res/food.png'/></span>
         </div>
         <div class="infobox">
             <div class='score'> Score: 0</div>
-<!--            <div class="difficulty">
+            <div class="difficulty">
                 Difficulty:
                 <button class="easy">Easy</button>
                 <button class="normal">Normal</button>
                 <button class="hard">Hard</button>
-            </div>-->
-        </div>
+            </div>
+        </div>-->
     </body>
 </html
