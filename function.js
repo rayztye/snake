@@ -9,7 +9,7 @@ and open the template in the editor.
 */
 $(document).ready(function()
 {
-    var bf = {width:80, height: 40, fieldsize: 50};
+    var bf = {width:32, height: 16, fieldsize: 50};
     var sc = 0;
     var food = $(".food");
     var score = $(".score");

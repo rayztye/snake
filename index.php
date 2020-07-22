@@ -6,7 +6,7 @@ and open the template in the editor.
     Created on : 01.07.2020, 09:26:56
     Author     : jannikb
 -->
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
     <head>
         <meta charset="utf-8" />
@@ -27,12 +27,6 @@ and open the template in the editor.
         </div>
         <div class="infobox">
             <div class='score'> Score: 0</div>
-            <div class="difficulty">
-                Difficulty:
-                <button class="easy">Easy</button>
-                <button class="normal">Normal</button>
-                <button class="hard">Hard</button>
-            </div>
         </div>-->
     </body>
 </html
