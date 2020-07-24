@@ -21,7 +21,7 @@ body
 
 .battlefield
 {
-    border: 1px solid black;
+    border: 1px solid #00A800;
     display: flex;
     float: left;
     background-color: white;

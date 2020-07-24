@@ -19,14 +19,11 @@ and open the template in the editor.
         <!--<script type="text/javascript" src="function.js"></script>-->
     </head>
     <body>
-<!--        <div class="battlefield">
-            <span class='snake first'></span>
-            <span class='snake mid'></span>
-            <span class='snake last'></span>
-            <span class='food'><img src='res/food.png'/></span>
-        </div>
+        <canvas class="battlefield" width="1600" height="800">
+             
+        </canvas>
         <div class="infobox">
             <div class='score'> Score: 0</div>
-        </div>-->
+        </div>
     </body>
 </html
