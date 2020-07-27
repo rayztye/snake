@@ -69,7 +69,7 @@ $(document).ready(function()
         
         switch(d)
         {
-            case "up": ny--; break;
+            case "up": ny--; break; 
             case "left": nx--; break;
             case "down": ny++; break;
             case "right": nx++; break;
