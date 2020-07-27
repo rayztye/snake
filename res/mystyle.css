@@ -1,8 +1,3 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
 /* 
     Created on : 01.07.2020, 09:26:56
     Author     : jannikb
@@ -21,10 +16,10 @@ body
 
 .battlefield
 {
-    border: 1px solid #00A800;
+    /*border: 1px solid #00A800;*/
     display: flex;
     float: left;
-    background-color: white;
+    /*background-color: white;*/
 }
 
 .snake
@@ -41,31 +36,9 @@ body
     display: inline-block;
 }
 
-span > img
-{
-    height: 50px;
-    width: 50px;
-}
-
 .infobox
 {
     display: block;
     float: left;
     margin-left: 20px;
-}
-
-.food
-{
-    position: absolute;
-    top: 400px;
-    left: 750px;
-}
-
-button
-{
-    display: block;
-    border: 0;
-    font-family: inherit;
-    background-color: inherit; 
-    font-size: inherit;
 }

@@ -11,7 +11,7 @@ and open the template in the editor.
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="shortcut icon" type="image/x-icon" href="res/favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="res/snake.png">
         <link rel="stylesheet" href="res/mystyle.css">
         <title>jQuery</title>
         <script type="text/javascript" src="jquery/jquery.min.js"></script>
@@ -23,7 +23,7 @@ and open the template in the editor.
              
         </canvas>
         <div class="infobox">
-            <div class='score'> Score: 0</div>
+            Score: <span class='score'>0</span>
         </div>
     </body>
 </html
