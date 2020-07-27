@@ -10,7 +10,7 @@ $(document).ready(function()
     var w = canvas.width;
     var h = canvas.height;
     // save the cell width in a variable for easy control
-    var cw = 10;
+    var cw = 25;
     var d;
     var food;
     var score;
@@ -39,8 +39,8 @@ $(document).ready(function()
     {
         var length = 5;
         snake_array = [];
-        for( var i = 0; i < length-1; i++ )
-            snake_array.push({x:i, y:0})
+        for( var i = length-1; i >=0; i-- )
+            snake_array.push({x:i, y:0});
     }
     
     // create the food now
@@ -82,8 +82,7 @@ $(document).ready(function()
         {
             // restart the game
             alert("Game Over");
-            init();
-            return;
+            location.reload();
         }
         
         // if the new head position matches with that of the food, create a new head instead of moving the tail
@@ -91,6 +90,7 @@ $(document).ready(function()
         {
             var tail = {x: nx, y:ny};
             score++;
+            $('.score').text(score);
             create_food();
         } else {
             var tail = snake_array.pop();
@@ -109,10 +109,6 @@ $(document).ready(function()
         // lets paint the food
         paint_cell(food.x, food.y, "red");
         // lets paint the score
-        var score_count = score;
-        var level_count = level;
-        ctx.fillText(score_count, 5, h-5);
-        ctx.fillText(level_count, 60, h-5);
     }
     
     // lets first create a generic function to paint cells
