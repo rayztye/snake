@@ -1,29 +1,15 @@
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
- 
-    Created on : 01.07.2020, 09:26:56
-    Author     : jannikb
--->
 <!DOCTYPE html>
 <html lang="de">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="shortcut icon" type="image/x-icon" href="res/snake.png">
-        <link rel="stylesheet" href="res/mystyle.css">
-        <title>jQuery</title>
-        <script type="text/javascript" src="jquery/jquery.min.js"></script>
-        <script type="text/javascript" src="logic.js"></script>
-        <!--<script type="text/javascript" src="function.js"></script>-->
+        <link rel="stylesheet" href="start.css">
+        <title>Snake</title>
     </head>
     <body>
-        <canvas class="battlefield" width="1600" height="800">
-             
-        </canvas>
-        <div class="infobox">
-            Score: <span class='score'>0</span>
+        <div class="content">
+            
+            <a href="game/">Start the game</a>  
         </div>
     </body>
-</html
+</html>

@@ -3,10 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/snake/logic.js</file>
-            <file>file:/C:/xampp/htdocs/snake/index.php</file>
-            <file>file:/C:/xampp/htdocs/snake/res/mystyle.css</file>
-            <file>file:/C:/xampp/htdocs/snake/function.js</file>
+            <file>file:/C:/xampp/htdocs/snake/game/templates/starthtml.php</file>
+            <file>file:/C:/xampp/htdocs/snake/game/templates/snake.html</file>
+            <file>file:/C:/xampp/htdocs/snake/game/res/mystyle.css</file>
+            <file>file:/C:/xampp/htdocs/snake/game/res/snake.js</file>
         </group>
     </open-files>
 </project-private>

@@ -1,0 +1,15 @@
+html
+{
+    font-size: 25px; 
+}
+
+body
+{
+    margin: 0;
+}
+
+.battlefield
+{
+    display: flex;
+    float: left;
+}
