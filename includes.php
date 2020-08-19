@@ -5,6 +5,7 @@ Author     : jannikb
 
 <?php
 include("templates/starthtml.php");
+include("templates/startpage.php");
 include("templates/snake.html");
 include("templates/endhtml.php");
 

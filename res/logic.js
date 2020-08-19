@@ -2,7 +2,8 @@
     Created on : 01.07.2020, 09:26:56
     Author     : jannikb
 */
-$(document).ready(function()
+
+function game()
 {
     // cnavas stuff
     var canvas = $(".battlefield")[0];
@@ -18,7 +19,7 @@ $(document).ready(function()
     var dir;
     //create the snake
     var snake_array;
-    
+
     function init()
     {
         d = "right"; // default direction 
@@ -32,9 +33,9 @@ $(document).ready(function()
         if( typeof game_loop != "undifined" ) clearInterval(game_loop);
         var game_loop = setInterval(paint,100);
     }
-    
+
     init();
-    
+
     function create_snake()
     {
         var length = 5;
@@ -42,7 +43,7 @@ $(document).ready(function()
         for( var i = length-1; i >=0; i-- )
             snake_array.push({x:i, y:0});
     }
-    
+
     // create the food now
     function create_food()
     {
@@ -51,7 +52,7 @@ $(document).ready(function()
             y: Math.round(Math.random()*(h-cw)/cw)
         };
     }
-    
+
     // paint the snake now
     function paint()
     {
@@ -60,13 +61,13 @@ $(document).ready(function()
         ctx.fillRect(0,0,w,h);
         ctx.strokeStyle = "black";
         ctx.strokeRect(0,0,w,h);
-        
+
         if( snake_array.length == 0 )
             create_snake();
         // the movement code for the snake to come here
         var nx = snake_array[0].x;
         var ny = snake_array[0].y;
-        
+
         switch(d)
         {
             case "up": ny--; break; 
@@ -74,7 +75,7 @@ $(document).ready(function()
             case "down": ny++; break;
             case "right": nx++; break;
         }
-        
+
         // this will restart the game if the hits the wall 
         // lets add the code for body collision
         // now if the head of the snake bumps into its body, the game will restart
@@ -84,7 +85,7 @@ $(document).ready(function()
             alert("Game Over");
             location.reload();
         }
-        
+
         // if the new head position matches with that of the food, create a new head instead of moving the tail
         if( nx == food.x && ny == food.y )
         {
@@ -98,9 +99,9 @@ $(document).ready(function()
             tail.y = ny;
         }
         // the snake can now eat the food
-        
+
         snake_array.unshift(tail); // puts back tha tail as the first cell
-        
+
         for( var i = 0; i < snake_array.length; i++ )
         {
             var c = snake_array[i];
@@ -110,7 +111,7 @@ $(document).ready(function()
         paint_cell(food.x, food.y, "red");
         // lets paint the score
     }
-    
+
     // lets first create a generic function to paint cells
     function paint_cell(x,y,color)
     {
@@ -119,7 +120,7 @@ $(document).ready(function()
         ctx.strokeStyle = "white";
         ctx.strokeRect(x*cw, y*cw, cw, cw);
     }
-    
+
     // this function will check of the provided x/y coordinates exist
     // in a array of cells or not
     function check_collision(x, y, array)
@@ -131,7 +132,7 @@ $(document).ready(function()
         }
         return false;
     }
-    
+
     $(window).on("keydown", function(event){
         switch(event.which)
         {
@@ -141,4 +142,4 @@ $(document).ready(function()
             case 68 : if( dir !== 65 ) { d = "right"; dir = 68; } break; 
         }
     });
-});
+}
