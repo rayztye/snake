@@ -1,3 +1,3 @@
-<div class="content">
-    <span onclick="game()">Start the Game</span>
+<div class="startcontent">
+    <span class="starttext" onclick="game()">Start the Game</span>
 </div>

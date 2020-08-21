@@ -5,6 +5,8 @@
 
 function game()
 {
+    $(".startcontent").hide();
+    $(".container").show();
     // cnavas stuff
     var canvas = $(".battlefield")[0];
     var ctx = canvas.getContext("2d");
@@ -59,7 +61,7 @@ function game()
         // lets paint the canvas now
         ctx.fillStyle = "white";
         ctx.fillRect(0,0,w,h);
-        ctx.strokeStyle = "black";
+        ctx.strokeStyle = "black"; /* border */
         ctx.strokeRect(0,0,w,h);
 
         if( snake_array.length == 0 )
@@ -91,7 +93,7 @@ function game()
         {
             var tail = {x: nx, y:ny};
             score++;
-            $('.score').text(score);
+            $('.score').text("Score: " + score);
             create_food();
         } else {
             var tail = snake_array.pop();

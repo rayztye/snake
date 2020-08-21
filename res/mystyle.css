@@ -14,3 +14,25 @@ body
     display: flex;
     float: left;
 }
+
+.container
+{
+    display: none;
+}
+
+.startcontent
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 400px;
+}
+
+.starttext
+{
+    transition: all ease 0.5s;
+}
+.starttext:hover
+{
+    font-size: 30px;
+}
