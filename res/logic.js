@@ -112,6 +112,7 @@ function game()
         // lets paint the food
         paint_cell(food.x, food.y, "red");
         // lets paint the score
+        
     }
 
     // lets first create a generic function to paint cells
