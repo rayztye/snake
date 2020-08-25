@@ -12,7 +12,7 @@ function game()
     color1 = "#04d9ff";
     color2 = "#faed27";
     color3 = "#00f700";
-    color4 = "#39ff14";
+    color4 = "#FF9933";
     color5 = "#ff073a";
     color6 = "#000000";
     
@@ -122,7 +122,7 @@ function game()
             paint_cell(f.x, f.y, color2);
         }
         // lets paint the food
-        paint_cell(food.x, food.y, color4);
+        paint_cell(food.x, food.y, color5);
         // lets paint the score
         
     }
