@@ -1,3 +1,3 @@
 <div class="startcontent">
-    <span class="starttext" onclick="game()">Start the Game</span>
+    <img class="starttext" src="res/pic/startscreen.gif" onclick="game()"></img>
 </div>

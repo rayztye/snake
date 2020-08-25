@@ -1,10 +1,21 @@
 /* 
     Created on : 01.07.2020, 09:26:56
     Author     : jannikb
+
+
+      Color:
 */
 
 function game()
 {
+    /* Color */
+    color1 = "#04d9ff";
+    color2 = "#faed27";
+    color3 = "#00f700";
+    color4 = "#39ff14";
+    color5 = "#ff073a";
+    color6 = "#000000";
+    
     $(".startcontent").hide();
     $(".container").show();
     // cnavas stuff
@@ -13,12 +24,11 @@ function game()
     var w = canvas.width;
     var h = canvas.height;
     // save the cell width in a variable for easy control
-    var cw = 25;
+    var cw = 25 ;
     var d;
     var food;
     var score;
     var level;
-    var dir;
     //create the snake
     var snake_array;
 
@@ -59,9 +69,10 @@ function game()
     function paint()
     {
         // lets paint the canvas now
-        ctx.fillStyle = "white";
+        ctx.fillStyle = color6;
         ctx.fillRect(0,0,w,h);
-        ctx.strokeStyle = "black"; /* border */
+        ctx.strokeStyle = color2; /* border */
+        ctx.lineWidth = 4;
         ctx.strokeRect(0,0,w,h);
 
         if( snake_array.length == 0 )
@@ -84,8 +95,7 @@ function game()
         if( nx == -1 || nx == w/cw || ny == -1 || ny == h/cw || check_collision(nx, ny, snake_array) )
         {
             // restart the game
-            alert("Game Over");
-            location.reload();
+            gameover();
         }
 
         // if the new head position matches with that of the food, create a new head instead of moving the tail
@@ -107,10 +117,12 @@ function game()
         for( var i = 0; i < snake_array.length; i++ )
         {
             var c = snake_array[i];
-            paint_cell(c.x, c.y, "blue");
+            var f = snake_array[0];
+            paint_cell(c.x, c.y, color1);
+            paint_cell(f.x, f.y, color2);
         }
         // lets paint the food
-        paint_cell(food.x, food.y, "red");
+        paint_cell(food.x, food.y, color4);
         // lets paint the score
         
     }
@@ -120,7 +132,8 @@ function game()
     {
         ctx.fillStyle = color;
         ctx.fillRect(x*cw, y*cw, cw, cw);
-        ctx.strokeStyle = "white";
+        ctx.lineWidth = 1;
+        ctx.strokeStyle = color6;
         ctx.strokeRect(x*cw, y*cw, cw, cw);
     }
 
@@ -135,14 +148,23 @@ function game()
         }
         return false;
     }
-
+    
+    function gameover()
+    {
+        $(".battlefield").hide();
+        $(".information").hide();
+        $(".errorscreen").show();
+        $(".score").text("Score: " + score);
+    }
+    
+    
     $(window).on("keydown", function(event){
         switch(event.which)
         {
-            case 87 : if( dir !== 83 ) { d = "up";   dir = 87; } break; 
-            case 65 : if( dir !== 68 ) { d = "left"; dir = 65; } break;
-            case 83 : if( dir !== 87 ) { d = "down"; dir = 83; } break; 
-            case 68 : if( dir !== 65 ) { d = "right"; dir = 68; } break; 
+            case 87 : if( d!=="down" ) { d = "up";} break; 
+            case 65 : if( d!=="right" ) { d = "left";} break;
+            case 83 : if( d!=="up" ) { d = "down";} break; 
+            case 68 : if( d!=="left" ) { d = "right";} break; 
         }
     });
 }
