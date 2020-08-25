@@ -64,6 +64,12 @@ body
     margin: 0;
 }
 
+.gameover
+{
+    width: 30%;
+    height: 30%;
+}
+
 .newgame
 {
     cursor: pointer;
