@@ -50,7 +50,7 @@ function game()
 
     function create_snake()
     {
-        var length = 5;
+        var length = 10;
         snake_array = [];
         for( var i = length-1; i >=0; i-- )
             snake_array.push({x:i, y:0});
